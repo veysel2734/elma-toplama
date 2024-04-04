@@ -8,13 +8,13 @@ HEIGHT = 600
 TITLE = "Bahçe Oyunu"
 FPS = 60
 
-elmalar = [Actor("elma", (random.randint(50, WIDTH - 50), 0)) for _ in range(5)]
+elmalar = [Actor("elma.png", (random.randint(50, WIDTH - 50), 0)) for _ in range(5)]
 
-sepet = Actor("sepet", (WIDTH // 2, HEIGHT - 50))
-ek_resim = Actor("ek_resim", (random.randint(50, WIDTH - 50), 0))
+sepet = Actor("sepet.png", (WIDTH // 2, HEIGHT - 50))
+ek_resim = Actor("ek_resim.png", (random.randint(50, WIDTH - 50), 0))
 skor = 0
 oyun_devam_ediyor = True  
-bahce_arkaplan = Actor("bahce_arkaplan")
+bahce_arkaplan = Actor("bahce_arkaplan.png")
 bahce_arkaplan.pos = (400, 305)  
 
 def yeni_elma(elma):
