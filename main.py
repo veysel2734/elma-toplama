@@ -1,5 +1,4 @@
-#pgzero
-
+import pgzrun
 import random
 
 WIDTH = 800
@@ -45,7 +44,7 @@ def update(dt):
         oyun_devam_ediyor = False  
     
 def draw():
-    
+    global screen  # screen değişkenini global olarak tanımlıyoruz
     screen.clear()
     bahce_arkaplan.draw()
 
@@ -64,4 +63,6 @@ for elma in elmalar:
     yeni_elma(elma) 
 yeni_ek_resim()  
 
-bahce_arkaplan.image = "bahce_arkaplan"  
+bahce_arkaplan.image = "bahce_arkaplan"
+
+pgzrun.go()  # Oyun döngüsünü başlatıyoruz
